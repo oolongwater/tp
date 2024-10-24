@@ -35,5 +35,23 @@
 
         <!-- Email label -->
         <Label fx:id="email" styleClass="cell_small_label" text="Email: \$email" />
+
+        <!-- Add a Region for spacing between Contact and Skills -->
+        <Region prefHeight="20" /> <!-- Adjust the height as needed for spacing -->
+
+        <!-- Skills Section -->
+        <Label styleClass="cell_header_label" text="Skills" style="-fx-font-size: 14pt; -fx-font-weight: bold;" />
+
+        <!-- Skills label -->
+        <Label fx:id="skills" styleClass="cell_small_label" text="Skills: \$skills" />
+
+        <!-- Add a Region for spacing between Skills and Interview Score -->
+        <Region prefHeight="20" /> <!-- Adjust the height as needed for spacing -->
+
+        <!-- Interview Score Section -->
+        <Label styleClass="cell_header_label" text="Interview Score" style="-fx-font-size: 14pt; -fx-font-weight: bold;" />
+
+        <!-- Interview Score label -->
+        <Label fx:id="score" styleClass="cell_small_label" text="Interview Score: \$score" />
     </VBox>
 </ScrollPane>

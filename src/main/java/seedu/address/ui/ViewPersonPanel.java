@@ -1,6 +1,8 @@
 package seedu.address.ui;
 
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -30,6 +32,12 @@ public class ViewPersonPanel extends UiPart<Region> {
     @FXML
     private Label email;
 
+    @FXML
+    private Label skills;
+
+    @FXML
+    private Label score;
+
     /**
      * Details to include inside the panel
      */
@@ -45,6 +53,14 @@ public class ViewPersonPanel extends UiPart<Region> {
         job.setText("Job : " + person.getJob().jobName);
         phone.setText("Phone Number : " + person.getPhone().value);
         email.setText("Email Address : " + person.getEmail().value);
+
+        // Convert Set<Skill> to List<String>
+        List<String> skillNames = person.getSkills().stream()
+                .map(skill -> skill.toString())
+                .collect(Collectors.toList());
+        skills.setText("Skills : " + String.join(", ", skillNames));
+
+        score.setText("Interview Score : " + person.getInterviewScore());
         Set<Tag> tags = person.getTags();
         if (tags.contains(Person.DEFAULT_TAG_PENDING)) {
             status.setText("Status : " + Person.DEFAULT_TAG_PENDING.tagName);
