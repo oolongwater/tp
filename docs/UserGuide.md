@@ -44,7 +44,8 @@ HiredFiredPro is a **desktop app for managing interviews, optimized for use via 
 
 ## Features
 
-<box type="info" seamless>
+<box type="info" seamless></box>
+
 
 **Notes about the command format:**<br>
 
@@ -66,6 +67,8 @@ HiredFiredPro is a **desktop app for managing interviews, optimized for use via 
 * If you are using a PDF version of this document, be careful when copying and pasting commands that span multiple lines as space characters surrounding line-breaks may be omitted when copied over to the application.
 </box>
 
+* `t/tagwithoutspace` is a valid tag but `t/tag with space` is an invalid tag.
+
 ### Viewing help : `help`
 
 Shows a message explaining how to access the help page.
@@ -81,10 +84,9 @@ Adds a person to HiredFiredPro.
 
 Format: `add n/NAME j/JOB p/PHONE_NUMBER e/EMAIL [s/SKILL]… i/INTERVIEW_SCORE  [t/TAG]…​`
 
-<box type="tip" seamless>
+<box type="tip" seamless></box>
 
 **Tip:** A person can have any number of tags and skills (including 0)
-</box>
 
 Examples:
 * `add n/John Doe j/Software Engineer p/98765432 e/johnd@example.com i/5.0`
@@ -229,12 +231,12 @@ HiredFiredPro data are saved in the hard disk automatically after any command th
 
 HiredFiredPro data are saved automatically as a JSON file `[JAR file location]/data/hiredfiredpro.json`. Advanced users are welcome to update data directly by editing that data file.
 
-<box type="warning" seamless>
+<box type="warning" seamless></box>
 
 **Caution:**
+
 If your changes to the data file makes its format invalid, HiredFiredPro will discard all data and start with an empty data file at the next run.  Hence, it is recommended to take a backup of the file before editing it.<br>
 Furthermore, certain edits can cause HiredFiredPro to behave in unexpected ways (e.g., if a value entered is outside the acceptable range). Therefore, edit the data file only if you are confident that you can update it correctly.
-</box>
 
 ### Archiving data files `[coming in v2.0]`
 
